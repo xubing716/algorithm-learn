@@ -1,0 +1,50 @@
+package LinearList;
+
+/**
+ * 链表去重 场景分为： 1）保留重复元素第一次出现的元素，删除其他重复元素 2）删除所有重复数据
+ * 
+ * @author xubing
+ *
+ */
+public class LinkedUnique {
+
+
+    public static Node delDuplicateElementButSaveFirst(Node node) {
+        
+        if(node == null || node.next == null)
+        {
+            return node;
+        }
+        
+        Node pCur = node;
+        Node pNext = node.next;
+        
+        while(pNext != null)
+        {
+            if(pCur.data == pNext.data)
+            {
+                //delete pNext node
+                Node tmp = pNext;
+                pCur.next = pNext.next;
+                tmp.next = null;
+            }
+            else
+            {
+                pCur = pNext;
+            }
+            pNext = pNext.next;
+        }
+        
+        return null;
+    }
+
+    public static Node delAllDuplicateElement(Node node) {
+        return null;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

@@ -1,0 +1,44 @@
+package LinearList;
+
+import java.util.Random;
+
+public class Node {
+
+    int data;
+    Node next;
+
+    public Node(int data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "Node [data=" + data + ", next=" + next + "]";
+    }
+
+
+    public static Node initNodeList(int nodeNums) {
+        Random random = new Random();
+
+        Node head = null;
+        Node pre = null;
+        for (int i = 0; i < nodeNums; i++) {
+
+            if (head == null) {
+                int data = random.nextInt(10);
+                Node node = new Node(data, null);
+                head = node;
+                pre = head;
+            } else {
+                int data = random.nextInt(10);
+                Node node = new Node(data, null);
+                pre.next = node;
+                pre = node;
+            }
+
+        }
+        return head;
+    }
+
+}

@@ -1,0 +1,20 @@
+package LinearList;
+
+
+/**
+ * 实现链表划分，给定元素X
+ * 
+ * @author xubing
+ *
+ */
+public class LinkedPartition {
+
+
+    public static Node linkedPartitionByElement(Node list, int element) {
+
+    }
+
+    public static void main(String[] args) {
+
+    }
+}

@@ -1,0 +1,16 @@
+package LinearList;
+
+/**
+ *  判断链表是否有环，使用快慢指针，同时也可以使用快慢指针找链表的中点
+ * @author xubing
+ *
+ */
+
+public class LinkedHasRing {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

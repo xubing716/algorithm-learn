@@ -1,0 +1,49 @@
+package LinearList;
+
+/**
+ * 翻转链表： 输入：给定从m到n位置翻转(m <= n)
+ * 
+ * @author xubing
+ *
+ */
+public class ReverseList {
+
+
+    public static Node reverseList(Node node, int fromIndex, int toIndex) {
+
+        // 找到聊表n-1的位置
+        Node pre = node;
+        int i = 0;
+        for (; i < fromIndex; i++) {
+            pre = pre.next;
+        }
+
+        Node pNext = pre.next;
+        Node pCur = null;
+        // 将pre后续节点依次遍历toIndex - fromIndex差值个数元素，采用头插法依次插入
+        while (i < toIndex) {
+            Node tmp = pNext.next;
+            
+            //头插法
+            pNext.next = pre.next;
+            pre.next = pNext;
+            
+            pNext = tmp;
+            i++;
+        }
+
+        return node;
+    }
+
+
+    public static void main(String[] args) {
+        Node node = ListUtils.initNodeList(10);
+        
+        ListUtils.printList(node);
+
+        // 指定从3到5开始翻转
+        ReverseList.reverseList(node, 3, 7);
+        
+        ListUtils.printList(node);
+    }
+}

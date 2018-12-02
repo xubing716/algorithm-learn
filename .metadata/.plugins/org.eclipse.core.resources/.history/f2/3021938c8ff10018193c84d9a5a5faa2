@@ -1,0 +1,11 @@
+package LinearList;
+
+/**
+ * 翻转链表：
+ *     输入：给定从m到n位置翻转(m <= n)
+ * @author xubing
+ *
+ */
+public class ReverseList {
+
+}

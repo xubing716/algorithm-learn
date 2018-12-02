@@ -1,0 +1,17 @@
+package LinearList;
+
+/**
+ * 翻转链表：
+ *     输入：给定从m到n位置翻转(m <= n)
+ * @author xubing
+ *
+ */
+public class ReverseList {
+
+    
+    public static void main(String[] args) {
+        Node node = ListUtils.initNodeList(10);
+        
+        //指定从3到5开始翻转
+    }
+}

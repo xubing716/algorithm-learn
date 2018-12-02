@@ -1,0 +1,16 @@
+package LinearList;
+
+/**
+ *  判断链表是否有环
+ * @author xubing
+ *
+ */
+
+public class LinkedHasRing {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
