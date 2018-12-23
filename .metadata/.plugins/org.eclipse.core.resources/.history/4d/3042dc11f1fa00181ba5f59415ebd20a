@@ -1,0 +1,53 @@
+package Stack;
+
+import java.util.Stack;
+
+/**
+ * 获取最长匹配括号问题
+ * 
+ * @author xubing
+ *
+ */
+public class GetLongestParenthese {
+
+
+    /**
+     * 计算
+     * 
+     * @param str
+     * @return
+     */
+    public static int getLongestParenthese(String str) {
+
+        int start = -1;
+        int maxLength = 0;
+
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < str.length(); i++) {
+
+            char index = str.charAt(i);
+            if (index == '(') {
+                stack.push('(');
+            } else if (index == ')') {
+                if (stack.isEmpty()) {
+                    start = i;
+                } else {
+                    char cc = stack.pop();
+                    if (stack.isEmpty()) {
+                        maxLength = Math.max(maxLength, i - start);
+                    } else {
+                        maxLength = Math.max(maxLength, i - stack.size() - 1);
+                    }
+                }
+            }
+        }
+
+        return maxLength;
+    }
+    
+    public static void main(String[] args) {
+        String str = "";
+        System.out.println("result:"+GetLongestParenthese.getLongestParenthese(str));
+    }
+}

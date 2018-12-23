@@ -1,0 +1,14 @@
+package Stack;
+
+/**
+ * 获取最长匹配括号问题
+ * @author xubing
+ *
+ */
+public class GetLongestParenthese {
+
+    
+    public static int getLongestParenthese(String str) {
+        
+    }
+}

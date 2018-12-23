@@ -1,0 +1,17 @@
+package queue;
+
+/**
+ * 有向无环图：可以解决事件驱动依赖问题，
+ * Spark中就是使用有向无环图来解决事件依赖问题的
+ * 使用二维数组表示边关系
+ * @author xubing
+ *
+ */
+
+public class DAG {
+
+    public static int [][] getGraph(){
+        
+    }
+    
+}

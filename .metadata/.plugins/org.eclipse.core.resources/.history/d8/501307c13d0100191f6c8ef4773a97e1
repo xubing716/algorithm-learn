@@ -1,0 +1,31 @@
+package String;
+
+/**
+ * ×Ö·û´®×óÒÆKÎ»
+ * 
+ * @author xubing
+ *
+ */
+public class LeftRotateString {
+
+
+    public static void rotateString(char[] str, int from, int to) {
+
+        char tmp = ' ';
+        while (from < to) {
+            tmp = str[from];
+            str[from++] = str[to];
+            str[to--] = tmp;
+        }
+    }
+
+    public static void leftRotateString(char[] str, int from, int to) {
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
