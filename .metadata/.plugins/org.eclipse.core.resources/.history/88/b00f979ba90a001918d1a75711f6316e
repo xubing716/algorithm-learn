@@ -3,7 +3,7 @@ package String;
 import java.util.Arrays;
 
 /**
- * ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½KÎ»
+ * ×Ö·û´®×óÒÆKÎ»
  * 
  * @author xubing
  *
@@ -24,8 +24,8 @@ public class LeftRotateString {
     /**
      * 
      * @param str
-     * @param n ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-     * @param index Ö¸ï¿½ï¿½ï¿½Æ¶ï¿½Î»ï¿½ï¿½
+     * @param n ×Ö·û´®³¤¶È
+     * @param index Ö¸¶¨ÒÆ¶¯Î»ÖÃ
      */
     public static void leftRotateString(char[] str, int strLength, int leftRotateIndex) {
 

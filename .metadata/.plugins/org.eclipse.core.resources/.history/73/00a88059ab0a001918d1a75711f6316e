@@ -1,0 +1,22 @@
+package String;
+
+
+/**
+ * 全排列问题： 思路： 1） dp 2） 递归
+ * 
+ * @author xubing
+ *
+ */
+public class FullPermutation {
+
+    
+    public static void getFullPermutation(int[] data) {
+        
+        //使用递归思想进行解决
+    }
+
+    public static void main(String[] args) {
+        int[] data = {1, 2, 3, 4};
+        FullPermutation.getFullPermutation(data);
+    }
+}
