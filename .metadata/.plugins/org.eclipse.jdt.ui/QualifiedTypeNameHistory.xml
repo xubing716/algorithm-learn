@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="LinearList.LinkedUnique"/>
 <fullyQualifiedTypeName name="LinearList.ListUtils"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="String.FullPermutation"/>
 </qualifiedTypeNameHistroy>
