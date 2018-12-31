@@ -1,0 +1,56 @@
+package String;
+
+/**
+ * 计算三个字母组合，不能连续出现三个字母相同的场景，，求满足长度为n的字符串个数 思想： 动态规划问题 已知n-1，求n 可以将n-1结果分为两种： 末尾两个字符不相同 末尾两个字符相同 求n：
+ * 
+ * @author xubing
+ *
+ */
+public class CalcThreeCharCompose {
+
+    class Matrix {
+        int x1;
+        int x2;
+        int y1;
+        int y2;
+
+        public Matrix(int x1, int y1, int x2, int y2) {
+            this.x1 = x1;
+            this.y1 = y1;
+
+            this.x2 = x2;
+            this.y2 = y2;
+        }
+    }
+
+
+    public static int getThreeCharComposeNums(int n) {
+        int nNonRepeat = 3;
+        int nRepeat = 0;
+
+        for (int i = 2; i <= n; i++) {
+            nNonRepeat = 2 * (nNonRepeat + nRepeat);
+            nRepeat = nNonRepeat;
+        }
+        return nNonRepeat + nRepeat;
+    }
+
+    // 第一种方法时间复杂度为：O(N)===》O(logN)
+    // 利用矩阵思想
+    public static int getThreeCharComposeNums2(int n) {
+        int nNonRepeat = 3;
+        int nRepeat = 0;
+
+        for (int i = 2; i <= n; i++) {
+            nNonRepeat = 2 * (nNonRepeat + nRepeat);
+            nRepeat = nNonRepeat;
+        }
+        return nNonRepeat + nRepeat;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("result:" + getThreeCharComposeNums(5));
+
+        Matrix initMax = new Matrix();
+    }
+}

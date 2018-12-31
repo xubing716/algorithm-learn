@@ -2,6 +2,9 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="LinearList.LinkedUnique"/>
 <fullyQualifiedTypeName name="LinearList.ListUtils"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="String.FullPermutation"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="String.Manacher"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="String.CalcThreeCharCompose.Matrix"/>
 </qualifiedTypeNameHistroy>
