@@ -1,0 +1,10 @@
+package Arrays;
+
+/**
+ * 绝对众数
+ * @author xubing
+ *
+ */
+public class AbsoluteMode {
+
+}

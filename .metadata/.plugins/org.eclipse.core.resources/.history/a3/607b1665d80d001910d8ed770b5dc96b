@@ -1,0 +1,53 @@
+package String;
+
+// KMP算法
+
+public class KMP {
+
+
+    // 暴力求解时间复杂度为：O(N*N)
+    public static int getStringByViolence(String data, String pattern) {
+        int i = 0;
+        int j = 0;
+        while (i < data.length() && j < pattern.length()) {
+            if (data.charAt(i + j) == pattern.charAt(j)) {
+                j++;
+            } else {
+                i++;
+                j = 0;
+            }
+        }
+
+        if (j >= pattern.length()) {
+            return i;
+        }
+
+        return -1;
+    }
+
+    // KMP算法是對暴力求解的优化，例如Manacher算法一样，可以利用对称性来利用：
+    //已知【0~n-1】，求解n的时候
+    //KMP：第一步先求解next数组
+    
+    public static int getStringByKMP(String data, String pattern) {
+       
+        
+        return -1;
+    }
+
+    public static int [] getNext(String pattern) {
+        int [] next = new int[pattern.length()];
+        
+        
+        return next;
+    }
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String data = "aaabaaaabaacabaaeaabaaoaab";
+        String pattern = "oaab";
+        System.out.println(getStringByViolence(data, pattern));
+    }
+
+}

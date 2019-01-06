@@ -1,0 +1,17 @@
+package String;
+
+//KMP算法
+
+public class KMP {
+    
+    
+    //暴力求解时间复杂度为：O(N)
+    
+    
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

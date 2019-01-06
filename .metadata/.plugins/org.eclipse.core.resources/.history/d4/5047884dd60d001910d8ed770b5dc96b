@@ -1,0 +1,28 @@
+package String;
+
+// KMP算法
+
+public class KMP {
+
+
+    // 暴力求解时间复杂度为：O(N*N)
+    public static int getStringByViolence(String data, String pattern) {
+        int result = 0;
+        int i = 0;
+        int j = 0;
+        while(i < data.length() && ) {
+            
+        }
+
+
+        return result;
+    }
+
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

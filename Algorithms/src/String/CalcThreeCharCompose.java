@@ -84,7 +84,6 @@ public class CalcThreeCharCompose {
             Matrix tmp = new Matrix(initMax.x1, initMax.y1, initMax.x2, initMax.y2);
             MatrixCalc(initMax, n / 2);
             MatrixMulti(initMax, initMax);
-            System.out.println(tmp.toString());
             MatrixMulti(initMax, tmp);
         }
     }

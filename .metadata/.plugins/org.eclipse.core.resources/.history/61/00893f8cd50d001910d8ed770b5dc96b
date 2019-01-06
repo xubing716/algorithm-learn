@@ -1,0 +1,14 @@
+package String;
+
+//KMP算法
+
+public class KMP {
+    
+    
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

@@ -1,0 +1,10 @@
+package Arrays;
+
+/**
+ *  没有bug的二分查找
+ * @author xubing
+ *
+ */
+public class BinarySearch {
+
+}
