@@ -1,0 +1,15 @@
+package Arrays;
+
+/**
+ * 给定一个数组，求其中第一个缺失的正整数 
+ * @author xubing
+ *
+ */
+public class GetFirstLossNums {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

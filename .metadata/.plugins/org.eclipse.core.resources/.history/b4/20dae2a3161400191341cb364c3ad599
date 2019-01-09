@@ -1,0 +1,33 @@
+package Arrays;
+
+/**
+ * 给定一个数组，求其中第一个缺失的正整数
+ * 
+ * @author xubing
+ *
+ */
+public class GetFirstLossNums {
+
+    public static int getFirstLossNums(int[] arr) {
+        // 利用hash思想存储已经遍历的数据，需要空间复杂度O(N)
+        boolean[] result = new boolean[arr.length + 1];
+        java.util.Arrays.fill(result, false);
+
+        result[0] = true;
+
+        int tmpArrData = 0;
+        for(int i = 0; i< arr.length; i++) {
+            
+        }
+
+
+        return 0;
+    }
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
