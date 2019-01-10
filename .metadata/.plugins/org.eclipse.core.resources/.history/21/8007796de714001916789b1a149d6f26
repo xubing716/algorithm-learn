@@ -1,0 +1,30 @@
+package Arrays;
+
+/**
+ * 给定数组，求数组中最长连续递增子数组
+ * 
+ * @author xubing
+ *
+ */
+public class GetMaxSequence {
+
+    public static int getMaxSequence(int[] arr) {
+
+        int max = 0;
+        int startIndex = 0;
+        int endIndex = 0;
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i + 1] - arr[i] == 1) {
+
+            }
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+}

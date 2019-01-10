@@ -1,0 +1,39 @@
+package Arrays;
+
+/**
+ * 给定数组，求数组中最长连续递增子数组
+ * 
+ * @author xubing
+ *
+ */
+public class GetMaxSequence {
+
+    public static int getMaxSequence(int[] arr) {
+
+        int max = 0;
+        int startIndex = 0;
+        int endIndex = 0;
+        int count = 1;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] - arr[i] == 1) {
+                count++;
+            } else {
+                if (max < count) {
+                    max = count;
+                    endIndex = i;
+                }
+                count = 1;
+            }
+        }
+        System.out.println("max:" + max);
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        int[] arr =
+                {1, 2, 3, 4, 5, 6, 7, 8, 9, 34, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 99, 121};
+        getMaxSequence(arr);
+    }
+
+}

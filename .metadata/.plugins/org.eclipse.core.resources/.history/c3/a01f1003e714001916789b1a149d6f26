@@ -1,0 +1,15 @@
+package Arrays;
+
+/**
+ * 给定数组，求数组中最长连续递增子数组
+ * @author xubing
+ *
+ */
+public class GetMaxSequence {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
