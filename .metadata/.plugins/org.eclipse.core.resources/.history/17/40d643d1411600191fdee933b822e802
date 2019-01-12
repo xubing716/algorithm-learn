@@ -1,0 +1,90 @@
+package Arrays;
+
+/**
+ * 
+ * 给定指定数组，将数组排序之后，求数组相连元素最大gap
+ * 
+ * @author xubing
+ *
+ */
+public class CalcArrayElementMaxGap {
+
+    /*
+     * 思路,可以先将数组配置,依次遍历获取最大间隔 分析: 时间复杂度为:排序的时间复杂度,为:O(NlogN) 分析:利用空间,减低时间复杂度
+     */
+    public static int getMaxGapsBySort(int[] arr) {
+
+        java.util.Arrays.sort(arr);
+        int maxGap = 0;
+        int tmpGap = 0;
+        for (int i = 1; i < arr.length; i++) {
+            tmpGap = arr[i] - arr[i - 1];
+            if (tmpGap > maxGap) {
+                maxGap = tmpGap;
+            }
+        }
+        System.out.println("maxGap:" + maxGap);
+        return 0;
+    }
+
+    /*
+     * 利用桶排序的思想,将数组中获取最大值和最小值,归一化处理, 将每个数组映射到不同的间隔的桶中 依次遍历所有的桶,获取前一个桶中最小值和相邻桶中的最大值
+     */
+    public static int getMaxGapsByBucket(int[] arr) {
+
+        // 获取最大值和最小值
+        int minValue = arr[0];
+        int maxValue = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+            if (arr[i] < minValue) {
+                minValue = arr[i];
+            }
+        }
+
+        int length = maxValue - minValue;
+        // 避免不要的误差,使用N个桶,即arr.length
+
+        Bucket[] buckets = new Bucket[arr.length];
+        int bucketInde = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            int bucketIndex = (arr[i] - minValue) * arr.length / length;
+        }
+
+
+        return 0;
+    }
+
+    static class Bucket {
+        boolean isValid = false;
+        int minValue;
+        int maxValue;
+
+        public void add(int i) {
+            if (!isValid) {
+                isValid = true;
+                minValue = i;
+                maxValue = i;
+            } else {
+                if (i > maxValue) {
+                    maxValue = i;
+                }
+                if (i < minValue) {
+                    minValue = i;
+                }
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] arr = {1, 7, 14, 9, 4, 13};
+        getMaxGapsBySort(arr);
+    }
+
+}

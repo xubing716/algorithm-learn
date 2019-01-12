@@ -1,0 +1,37 @@
+package Arrays;
+
+/**
+ * Cantor数组 定义:已知数组A,乱序存储了前N个数(没有重复数),现在需要统计A[i+,N-1]之间小于A[i]元素个数,存储再C[i]数组中,
+ * 给定数组:A={4,6,2,5,3,1},Cantor数组为:C={3,4,1,2,1,0} 1) 求Cantor数组 2) 已知Cantor数组,回复数组A
+ * 
+ * @author xubing
+ *
+ */
+public class CantorArray {
+
+    public static void getCantorArray(int[] arr, int[] cantor) {
+
+        for (int i = 0; i < arr.length; i++) {
+            cantor[i] = 0;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[i]) {
+                    cantor[i]++;
+                }
+            }
+        }
+
+        System.out.println("cantor:" + java.util.Arrays.toString(cantor));
+    }
+    
+    public static void restoreArrayByCantor(int [] cantor) {
+        
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] arr = {4, 6, 2, 5, 3, 1};
+        int[] cantor = new int[arr.length];
+        getCantorArray(arr, cantor);
+    }
+
+}

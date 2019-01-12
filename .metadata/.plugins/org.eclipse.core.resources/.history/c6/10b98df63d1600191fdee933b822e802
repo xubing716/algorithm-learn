@@ -1,0 +1,40 @@
+package Arrays;
+
+/**
+ * 
+ * 给定指定数组，将数组排序之后，求数组相连元素最大gap
+ * 
+ * @author xubing
+ *
+ */
+public class CalcArrayElementMaxGap {
+
+    /*
+     * 思路,可以先将数组配置,依次遍历获取最大间隔 分析: 时间复杂度为:排序的时间复杂度,为:O(NlogN) 分析:利用空间,减低时间复杂度
+     */
+    public static int getMaxGapsBySort(int[] arr) {
+
+        java.util.Arrays.sort(arr);
+        int maxGap = 0;
+        int tmpGap = 0;
+        for (int i = 1; i < arr.length; i++) {
+            tmpGap = arr[i] - arr[i - 1];
+            if (tmpGap > maxGap) {
+                maxGap = tmpGap;
+            }
+        }
+        System.out.println("maxGap:" + maxGap);
+        return 0;
+    }
+
+    public static int getMaxGapsByBucket(int[] arr) {
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] arr = {1, 7, 14, 9, 4, 13};
+        getMaxGapsBySort(arr);
+    }
+
+}

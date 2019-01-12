@@ -1,0 +1,22 @@
+package Arrays;
+
+/**
+ * 
+ * 给定指定数组，将数组排序之后，求数组相连元素最大gap
+ * 
+ * @author xubing
+ *
+ */
+public class CalcArrayElementMaxGap {
+
+    public static int getMaxGaps(int[] arr) {
+
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
