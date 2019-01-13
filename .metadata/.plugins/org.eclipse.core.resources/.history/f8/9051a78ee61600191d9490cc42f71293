@@ -1,0 +1,11 @@
+package Tree;
+
+
+public interface TreeOperateInterface {
+
+    boolean insert(int value);
+
+    boolean delete(int value);
+
+    Node find(int value);
+}

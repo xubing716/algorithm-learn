@@ -1,0 +1,17 @@
+package Tree;
+
+
+public interface TreeOperateInterface {
+
+    boolean insert(int value);
+
+    boolean delete(int value);
+
+    Node find(int value);
+
+    void preOrder(Node head);
+
+    void inOrder(Node head);
+
+    void postOrder(Node head);
+}

@@ -1,0 +1,107 @@
+package Tree;
+
+/**
+ * 二叉搜索树---->AVL平衡树--->红黑树
+ * 
+ * B+/B-/B*树
+ * 
+ * 
+ * @author xubing
+ *
+ */
+
+public class BinarySearchTree implements TreeOperateInterface {
+
+    // 根节点
+    private Node mRoot;
+
+    public BinarySearchTree(int value) {
+        insert(value);
+    }
+
+    public BinarySearchTree() {}
+
+    public BinarySearchTree(int[] value) {
+        if ((value == null) || (value.length == 0)) {
+            return;
+        }
+        for (int i = 0; i < value.length; i++) {
+            insert(value[i]);
+        }
+    }
+
+    @Override
+    public boolean insert(int value) {
+        mRoot = _insert(mRoot, value);
+        preOrder(mRoot);
+        return true;
+    }
+
+    private Node _insert(Node root, int value) {
+
+        if (root == null) {
+            return new Node(value, null, null);
+        }
+
+        if (value < root.data) {
+            root.left = _insert(root.left, value);
+        } else if (value > root.data) {
+            root.right = _insert(root.right, value);
+        }
+        // value == root.data,插入重复数据
+        return root;
+    }
+
+    @Override
+    public boolean delete(int value) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public Node find(int value) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void preOrder(Node root) {
+
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data);
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    @Override
+    public void inOrder(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        preOrder(root.left);
+        System.out.print(root.data);
+        preOrder(root.right);
+
+    }
+
+    @Override
+    public void postOrder(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        preOrder(root.left);
+        preOrder(root.right);
+        System.out.print(root.data);
+    }
+
+
+    public static void main(String[] args) {
+        BinarySearchTree tree = new BinarySearchTree();
+        int[] arr = {15.5, 3, 12, 16, 20, 23, 13, 18, 10, 6};
+        tree.insert(3);
+    }
+}

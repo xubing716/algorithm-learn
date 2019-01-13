@@ -1,0 +1,18 @@
+package Tree;
+
+/**
+ * 哈夫曼编码--前缀编码
+ * @author xubing
+ *
+ */
+public class HuffmanEnCode {
+    
+    
+    publ
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

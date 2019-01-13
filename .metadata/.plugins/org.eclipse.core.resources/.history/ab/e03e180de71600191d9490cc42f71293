@@ -1,0 +1,37 @@
+package Tree;
+
+/**
+ * 二叉搜索树---->AVL平衡树--->红黑树
+ * 
+ * B+/B-/B*树
+ * 
+ * 
+ * @author xubing
+ *
+ */
+
+public class BinarySearchTree implements TreeOperateInterface {
+
+    private Node mRoot;
+
+    /**
+     * 初始化树，
+     * 
+     * @param data 数组
+     */
+    public BinarySearchTree(int[] data) {
+
+    }
+
+    /**
+     * 初始化树
+     * 
+     * @param data 一个元素
+     */
+    public BinarySearchTree(int data) {
+
+    }
+
+
+
+}

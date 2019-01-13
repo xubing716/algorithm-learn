@@ -1,0 +1,10 @@
+package Tree;
+/**
+ * 二叉搜索树
+ * @author xubing
+ *
+ */
+
+public class BinarySearchTree {
+
+}

@@ -1,0 +1,128 @@
+package Tree;
+
+/**
+ * 二叉搜索树---->AVL平衡树--->红黑树
+ * 
+ * B+/B-/B*树
+ * 
+ * 
+ * @author xubing
+ *
+ */
+
+public class BinarySearchTree implements TreeOperateInterface {
+
+    // 根节点
+    private Node mRoot;
+
+    public Node getmRoot() {
+        return mRoot;
+    }
+
+    public BinarySearchTree(int value) {
+        insert(value);
+    }
+
+    public BinarySearchTree() {}
+
+    public BinarySearchTree(int[] value) {
+        if ((value == null) || (value.length == 0)) {
+            return;
+        }
+        for (int i = 0; i < value.length; i++) {
+            insert(value[i]);
+        }
+        preOrder(mRoot);
+    }
+
+    @Override
+    public boolean insert(int value) {
+        mRoot = _insert(mRoot, value);
+        return true;
+    }
+
+    private Node _insert(Node root, int value) {
+
+        if (root == null) {
+            return new Node(value, null, null);
+        }
+
+        if (value < root.data) {
+            root.left = _insert(root.left, value);
+        } else if (value > root.data) {
+            root.right = _insert(root.right, value);
+        }
+        // value == root.data,插入重复数据
+        return root;
+    }
+
+    @Override
+    public boolean delete(int value) {
+
+        return false;
+    }
+
+    @Override
+    public Node find(int value) {
+
+        return _find(mRoot, value);
+    }
+
+    public Node _find(Node root, int value) {
+
+        if (root == null || root.data == value) {
+            return root;
+        }
+        if (value < root.data) {
+            return _find(root.left, value);
+        } else {
+            return _find(root.right, value);
+        }
+    }
+
+    @Override
+    public void preOrder(Node root) {
+
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + ",");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    @Override
+    public void inOrder(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        System.out.print(root.data + ",");
+        inOrder(root.right);
+    }
+
+    @Override
+    public void postOrder(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + ",");
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {15, 5, 3, 12, 16, 20, 23, 13, 18, 10, 6, 6};
+        BinarySearchTree tree = new BinarySearchTree(arr);
+        System.out.println();
+        tree.inOrder(tree.getmRoot());
+        System.out.println();
+        tree.postOrder(tree.getmRoot());
+
+        System.out.println();
+        System.out.println(tree.find(6));
+    }
+}

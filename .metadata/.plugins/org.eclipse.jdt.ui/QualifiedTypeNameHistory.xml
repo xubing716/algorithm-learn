@@ -6,5 +6,7 @@
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="String.Manacher"/>
 <fullyQualifiedTypeName name="String.CalcThreeCharCompose.Matrix"/>
+<fullyQualifiedTypeName name="Arrays.CalcArrayElementMaxGap.Bucket"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
