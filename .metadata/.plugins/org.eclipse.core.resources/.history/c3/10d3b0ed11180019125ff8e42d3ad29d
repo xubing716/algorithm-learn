@@ -80,7 +80,7 @@ public class HuffmanEnCode {
                 }
             }
         }
-        return new Result(min1, min2);
+        return new Result();
     }
 
     public void calcFrequency(String data, char[] result) {

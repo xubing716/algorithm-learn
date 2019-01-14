@@ -20,13 +20,8 @@ public class HuffmanEnCode {
     }
 
     class Result {
-        public int min1Index;
-        public int min2Index;
-
-        public Result(int min1, int min2) {
-            this.min1Index = min1;
-            this.min2Index = min2;
-        }
+        public int minIndex;
+        public int maxIndex;
     }
 
     public void huffmanCoding(char[] result, HashMap<Integer, String> code) {
@@ -73,14 +68,14 @@ public class HuffmanEnCode {
                     min2 = min1;
                     s1 = i;
                     min1 = nodes[i].weight;
-                } else if ((s2 < 0) || (min2 > nodes[i].weight)) {
-                    s2 = i;
-                    min2 = nodes[i].weight;
-                } else {
                 }
+                else if((s2 < 0) || (min2 > nodes[i].weight)) {
+                    
+                }
+                else {}
             }
         }
-        return new Result(min1, min2);
+        return null;
     }
 
     public void calcFrequency(String data, char[] result) {

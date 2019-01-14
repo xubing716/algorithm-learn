@@ -9,4 +9,12 @@
 <fullyQualifiedTypeName name="Arrays.CalcArrayElementMaxGap.Bucket"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="Tree.Node"/>
+<fullyQualifiedTypeName name="Tree.BinarySearchTree"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="Tree.HuffmanEnCode"/>
+<fullyQualifiedTypeName name="Tree.HuffmanEnCode.HuffmanNode"/>
+<fullyQualifiedTypeName name="Tree.HuffmanEnCode.Result"/>
 </qualifiedTypeNameHistroy>
