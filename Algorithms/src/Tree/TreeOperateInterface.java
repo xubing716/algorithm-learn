@@ -33,6 +33,13 @@ public interface TreeOperateInterface {
      * @param root 根节点
      */
     void preOrder(Node root);
+    
+    /**
+     * 前序遍历(非递归)
+     * 
+     * @param root 根节点
+     */
+    void preOrderByNonRecursion(Node root);
 
     /**
      * 中序遍历
@@ -40,6 +47,13 @@ public interface TreeOperateInterface {
      * @param root 根节点
      */
     void inOrder(Node root);
+    
+    /**
+     * 中序遍历(非递归)
+     * 
+     * @param root 根节点
+     */
+    void inOrderByNonRecursion(Node root);
 
     /**
      * 后序遍历
@@ -47,4 +61,11 @@ public interface TreeOperateInterface {
      * @param root 根节点
      */
     void postOrder(Node root);
+    
+    /**
+     * 后序遍历（非递归）
+     * 
+     * @param root 根节点
+     */
+    void postOrderByNonRecursion(Node root);
 }

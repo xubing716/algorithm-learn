@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.Stack;
+
 /**
  * 二叉搜索树---->AVL平衡树--->红黑树
  * 
@@ -194,11 +196,100 @@ public class BinarySearchTree implements TreeOperateInterface {
         int[] arr = {15, 5, 3, 12, 16, 20, 23, 13, 18, 10, 6, 7};
         BinarySearchTree tree = new BinarySearchTree(arr);
         System.out.println();
-        tree.inOrder(tree.getmRoot());
+        tree.postOrderByNonRecursion(tree.getmRoot());
         System.out.println();
+        tree.postOrder(tree.getmRoot());
+    }
 
+    @Override
+    public void preOrderByNonRecursion(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        Stack<Node> stack = new Stack<>();
+        Node node = null;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            node = stack.pop();
+            System.out.print(node.data + "->");
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
 
-        tree.delete(7);
-        tree.inOrder(tree.getmRoot());
+    }
+
+    @Override
+    public void inOrderByNonRecursion(Node root) {
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        Stack<TNode> stack = new Stack<>();
+        TNode tnode = new TNode(root, true);
+        stack.push(tnode);
+
+        while (!stack.isEmpty()) {
+            tnode = stack.pop();
+            if (tnode.isFirstShow) {
+                if (tnode.node.right != null) {
+                    stack.push(new TNode(tnode.node.right, true));
+                }
+                stack.push(new TNode(tnode.node, false));
+                if (tnode.node.left != null) {
+                    stack.push(new TNode(tnode.node.left, true));
+                }
+            } else {
+                System.out.print(tnode.node.data + "->");
+            }
+        }
+
+    }
+
+    @Override
+    public void postOrderByNonRecursion(Node root) {
+        // TODO Auto-generated method stub
+        // TODO Auto-generated method stub
+        if (root == null) {
+            return;
+        }
+        Stack<TNode> stack = new Stack<>();
+        TNode tnode = new TNode(root, true);
+        stack.push(tnode);
+
+        while (!stack.isEmpty()) {
+            tnode = stack.pop();
+            if (tnode.isFirstShow) {
+                stack.push(new TNode(tnode.node, false));
+                if (tnode.node.right != null) {
+                    stack.push(new TNode(tnode.node.right, true));
+                }
+                if (tnode.node.left != null) {
+                    stack.push(new TNode(tnode.node.left, true));
+                }
+            } else {
+                System.out.print(tnode.node.data + "->");
+            }
+        }
+    }
+
+    class TNode {
+        Node node;
+        boolean isFirstShow;
+
+        public TNode(Node node, boolean isFirstShow) {
+            this.node = node;
+            this.isFirstShow = isFirstShow;
+        }
+
+        @Override
+        public String toString() {
+            return "TNode [node=" + node + ", isFirstShow=" + isFirstShow + "]";
+        }
+
     }
 }
