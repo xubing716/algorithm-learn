@@ -1,0 +1,26 @@
+package Tree;
+
+/**
+ * 将树的进行翻转，即左子树和右子树进行交换
+ * 
+ * @author xubing
+ *
+ */
+public class ReverseTree {
+
+    public static void reverseTree(Node head) {
+        if(head != null)
+        {
+            
+        }
+    }
+    
+    public static void swap(Node leftNode, Node rightNode,)
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] value = {27, 23, 81, 45, 21, 92, 5, 47};
+        BinarySearchTree tree = new BinarySearchTree(value);
+    }
+
+}

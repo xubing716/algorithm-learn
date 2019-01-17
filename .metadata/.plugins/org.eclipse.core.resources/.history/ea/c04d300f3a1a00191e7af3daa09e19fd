@@ -1,0 +1,51 @@
+package Tree;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * 指定()数据3组，随机生成3个括号的组合 利用树的思想 A(B)
+ * 
+ * @author xubing
+ *
+ */
+public class AllParenthesesByTree {
+
+    public static String getAllParenthest(int n) {
+
+        if (n == 0) {
+            return "";
+        }
+        if (n == 1) {
+            return "()";
+        }
+
+        List<String> result = new LinkedList<>();
+        List<String> result = new LinkedList<>();
+        List<String> result = new LinkedList<>();
+
+        for (int i = 0; i < n; i++) {
+            left = getAllParenthest(0);
+            right = getAllParenthest(n - 1);
+            // unit 合并
+            mergetLeftAndRight(sb, left, right);
+        }
+
+        return "";
+    }
+
+    private static void mergetLeftAndRight(StringBuilder sb, String left, String right) {
+        // TODO Auto-generated method stub
+        // A(B)
+        sb.append(left);
+        sb.append("(");
+        sb.append(right);
+        sb.append(")");
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(getAllParenthest(3));
+    }
+
+}

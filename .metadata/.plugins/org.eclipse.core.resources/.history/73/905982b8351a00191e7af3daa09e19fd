@@ -1,0 +1,17 @@
+package Tree;
+
+/**
+ * 指定()数据3组，随机生成3个括号的组合
+ * 利用树的思想
+ * A(B)
+ * @author xubing
+ *
+ */
+public class AllParenthesesByTree {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
